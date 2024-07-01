@@ -44,7 +44,7 @@ class Directory:
         self.__directories[directory_name] = Directory(directory_name)
     
     def list_directory(self):
-        print('\n'.join([f"File: {file}" for file in self.__files]) + '\n'.join([f"Directory: {directory}" for directory in self.__directories]))
+        print('\n'.join([f"File: {file}" for file in self.__files]) +  '\n' + '\n'.join([f"Directory: {directory}" for directory in self.__directories]))
         
     def search_files(self,file_name:str):
         return self.__files.get(file_name)
